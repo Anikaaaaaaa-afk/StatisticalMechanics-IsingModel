@@ -63,4 +63,4 @@ plt.grid(True, alpha=0.3)
 #theory_fluct = N * (mu**2) / (np.cosh(mu * B / kT_values)**2)  # Exact solution
 #plt.plot(kT_values, theory_fluct, 'k--', label='Theory: $Nμ^2 \mathrm{sech}^2(μB/kT)$')
 #plt.legend(fontsize=12)
-plt.savefig('paramagnet_fluctuations.png', dpi=300)
+plt.savefig('paramagnetic_fluctuations_sim.png', dpi=300)
