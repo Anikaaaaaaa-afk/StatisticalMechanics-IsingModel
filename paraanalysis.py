@@ -45,7 +45,7 @@ plt.title(f'Magnetization Evolution (Paramagnet: B = {B}, kT = {kT_fixed})', fon
 plt.grid(True, alpha=0.3)
 plt.legend(fontsize=12)
 plt.tight_layout()
-plt.savefig('magnetization_evolution.png', dpi=300, bbox_inches='tight')
+plt.savefig('para_magnetization_evolution.png', dpi=300, bbox_inches='tight')
 
 # Sweep over temperature values
 kT_values = np.linspace(0.1, 5.0, 50)
@@ -59,7 +59,7 @@ plt.ylabel("Entropy S (per spin)", fontsize=14)
 plt.title("Theoretical Entropy of a Paramagnet", fontsize=16)
 plt.grid(True, alpha=0.3)
 plt.tight_layout()
-plt.savefig('paramagnet_entropy.png', dpi=300, bbox_inches='tight')
+plt.savefig('para_entropy_vs_kT.png', dpi=300, bbox_inches='tight')
 
 # Entropy per spin formula for paramagnetism fixed kT
 kT = 0.5  # Fixed temperature
@@ -76,7 +76,7 @@ plt.ylabel("Entropy S (per spin)", fontsize=14)
 plt.title(f"Entropy vs Magnetic Field (kT = {kT})", fontsize=16)
 plt.grid(True, alpha=0.3)
 plt.tight_layout()
-plt.savefig('entropy_vs_B.png', dpi=300, bbox_inches='tight')
+plt.savefig('para_entropy_vs_B.png', dpi=300, bbox_inches='tight')
 
 # Plotting probability of alignment
 P_up = np.exp(mu * B / kT_values) / (2 * np.cosh(mu * B / kT_values))
@@ -91,7 +91,7 @@ plt.title("Probability of Spin Alignment vs Temperature", fontsize=16)
 plt.legend()
 plt.grid(True, alpha=0.3)
 plt.tight_layout()
-plt.savefig('alignment_probability.png', dpi=300, bbox_inches='tight')
+plt.savefig('para_alignment_probability.png', dpi=300, bbox_inches='tight')
 
 
 
