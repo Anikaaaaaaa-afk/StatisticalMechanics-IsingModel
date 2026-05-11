@@ -78,6 +78,5 @@ ani = animation.FuncAnimation(
 # Save animation
 ani.save("ferro.mp4", writer="ffmpeg", fps=20)
 
-# Optional: Show plot during execution
-# plt.show()
+
 
