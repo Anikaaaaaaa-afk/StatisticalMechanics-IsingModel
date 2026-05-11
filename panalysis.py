@@ -93,29 +93,5 @@ plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.savefig('alignment_probability.png', dpi=300, bbox_inches='tight')
 
-# Compute fluctuation vs temperature
-fluctuations_vs_kT = []
-for kT in kT_values:
-    spins = np.random.choice([-1, 1], size=(L, L))
-    magnetization_history = []
 
-    for step in range(num_steps):
-        spins = update_spins(spins, B, mu, kT)
-        magnetization_history.append(magnetization(spins))
-
-    mags = np.array(magnetization_history)
-    mean_M = np.mean(mags)
-    mean_M2 = np.mean(mags**2)
-    fluctuation = mean_M2 - mean_M**2
-    fluctuations_vs_kT.append(fluctuation)
-
-# Plotting fluctuation vs temperature
-plt.figure(figsize=(10, 6))
-plt.plot(kT_values, fluctuations_vs_kT, color='teal', linewidth=2)
-plt.xlabel("kT (Temperature)", fontsize=14)
-plt.ylabel("Magnetization Fluctuation", fontsize=14)
-plt.title("Magnetization Fluctuation vs Temperature (Paramagnet)", fontsize=16)
-plt.grid(True, alpha=0.3)
-plt.tight_layout()
-plt.savefig('fluctuation_vs_kT.png', dpi=300, bbox_inches='tight')
 
