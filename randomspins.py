@@ -59,4 +59,4 @@ def animate(frame):
 
 
 ani = animation.FuncAnimation(fig, animate, frames=num_steps, interval=100, blit=False)
-ani.save('boltzmann_spins.mp4', writer='ffmpeg', fps=10)
+ani.save('randomspins.mp4', writer='ffmpeg', fps=10)
